@@ -20,7 +20,7 @@ INNER JOIN orders using (order_id)
 GROUP BY monat, years
 ORDER BY years;
 #Total revenue over time.
-SELECT ROUND(SUM(payment_value)),
+SELECT ROUND(SUM(payment_value)) AS revenue,
 MONTH(order_purchase_timestamp) AS monat,
 YEAR(order_purchase_timestamp) AS jahr
 FROM olist_order_items_dataset 
@@ -28,3 +28,6 @@ INNER JOIN olist_order_payments_dataset using(order_id)
 INNER JOIN olist_orders_dataset USING(order_id)
 GROUP BY monat, jahr
 ORDER BY jahr, monat;
+#Salers marketing leads origin.
+SELECT count(mql_id), origin FROM olist_marketing_qualified_leads_dataset WHERE origin IS NOT NULL group by origin;
+
