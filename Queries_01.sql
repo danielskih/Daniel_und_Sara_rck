@@ -30,4 +30,5 @@ GROUP BY monat, jahr
 ORDER BY jahr, monat;
 #Salers marketing leads origin.
 SELECT count(mql_id), origin FROM olist_marketing_qualified_leads_dataset WHERE origin IS NOT NULL group by origin;
-
+USE olist_sql;
+SELECT COUNT(order_id), order_status FROM olist_sql.olist_orders_dataset GROUP BY order_status;

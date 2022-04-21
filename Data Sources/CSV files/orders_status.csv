@@ -1,0 +1,9 @@
+COUNT(order_id),order_status
+96478,delivered
+314,invoiced
+1107,shipped
+301,processing
+609,unavailable
+625,canceled
+5,created
+2,approved
