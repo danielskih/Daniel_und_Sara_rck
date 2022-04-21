@@ -306,302 +306,6 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='sellers_over_time' inline='true' name='federated.0vmdsn00d35o4d1cbu4dh0k2tumn' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='sellers_over_time' name='textscan.0nlzngr1ht9ynj16j3skz0pzmltt'>
-            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='sellers_over_time.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='vendors' ordinal='0' />
-            <column datatype='string' name='years' ordinal='1' />
-            <column datatype='string' name='monat' ordinal='2' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='vendors' ordinal='0' />
-            <column datatype='string' name='years' ordinal='1' />
-            <column datatype='string' name='monat' ordinal='2' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[sellers_over_time.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>vendors</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[vendors]</local-name>
-            <parent-name>[sellers_over_time.csv]</parent-name>
-            <remote-alias>vendors</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>years</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[years]</local-name>
-            <parent-name>[sellers_over_time.csv]</parent-name>
-            <remote-alias>years</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>monat</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[monat]</local-name>
-            <parent-name>[sellers_over_time.csv]</parent-name>
-            <remote-alias>monat</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <_.fcp.ObjectModelTableType.true...column caption='sellers_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]' role='measure' type='quantitative' />
-      <column caption='Monat' datatype='string' name='[monat]' role='dimension' type='nominal' />
-      <column caption='Vendors' datatype='integer' name='[vendors]' role='measure' type='quantitative' />
-      <column aggregation='CountD' caption='Years' datatype='string' name='[years]' role='dimension' type='nominal' />
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='sellers_over_time.csv' id='sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE'>
-            <properties context=''>
-              <relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='vendors' ordinal='0' />
-                  <column datatype='string' name='years' ordinal='1' />
-                  <column datatype='string' name='monat' ordinal='2' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
-    <datasource caption='customers_over_time' inline='true' name='federated.03vkziz0l9igs0191rfh91z0ydzt' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='customers_over_time' name='textscan.00p7fqd0neavbi1friafs0l502qv'>
-            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='customers_over_time.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='customers' ordinal='0' />
-            <column datatype='integer' name='years' ordinal='1' />
-            <column datatype='integer' name='monat' ordinal='2' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='customers' ordinal='0' />
-            <column datatype='integer' name='years' ordinal='1' />
-            <column datatype='integer' name='monat' ordinal='2' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[customers_over_time.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>customers</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[customers]</local-name>
-            <parent-name>[customers_over_time.csv]</parent-name>
-            <remote-alias>customers</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>years</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[years]</local-name>
-            <parent-name>[customers_over_time.csv]</parent-name>
-            <remote-alias>years</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>monat</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[monat]</local-name>
-            <parent-name>[customers_over_time.csv]</parent-name>
-            <remote-alias>monat</remote-alias>
-            <ordinal>2</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <_.fcp.ObjectModelTableType.true...column caption='customers_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]' role='measure' type='quantitative' />
-      <column caption='Customers' datatype='integer' name='[customers]' role='measure' type='quantitative' />
-      <column aggregation='Sum' caption='Monat' datatype='integer' name='[monat]' role='dimension' type='ordinal' />
-      <column aggregation='Sum' caption='Years' datatype='integer' name='[years]' role='dimension' type='ordinal' />
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='customers_over_time.csv' id='customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6'>
-            <properties context=''>
-              <relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='customers' ordinal='0' />
-                  <column datatype='integer' name='years' ordinal='1' />
-                  <column datatype='integer' name='monat' ordinal='2' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
-    <datasource caption='Total_revenue_per_item' inline='true' name='federated.1tmghr209zde2z1827dso0xem581' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='Total_revenue_per_item' name='textscan.0flet9i1tr7y4j1a522sb16eb5j6'>
-            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='Total_revenue_per_item.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='total_revenue_item' ordinal='0' />
-            <column datatype='string' name='product_id' ordinal='1' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='total_revenue_item' ordinal='0' />
-            <column datatype='string' name='product_id' ordinal='1' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Total_revenue_per_item.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>total_revenue_item</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[total_revenue_item]</local-name>
-            <parent-name>[Total_revenue_per_item.csv]</parent-name>
-            <remote-alias>total_revenue_item</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>product_id</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[product_id]</local-name>
-            <parent-name>[Total_revenue_per_item.csv]</parent-name>
-            <remote-alias>product_id</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <scale>1</scale>
-            <width>1073741823</width>
-            <contains-null>true</contains-null>
-            <collation flag='0' name='LEN_RUS' />
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <_.fcp.ObjectModelTableType.true...column caption='Total_revenue_per_item.csv' datatype='table' name='[__tableau_internal_object_id__].[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]' role='measure' type='quantitative' />
-      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
-      <column caption='Total Revenue Item' datatype='integer' name='[total_revenue_item]' role='measure' type='quantitative' />
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='Total_revenue_per_item.csv' id='Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132'>
-            <properties context=''>
-              <relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='total_revenue_item' ordinal='0' />
-                  <column datatype='string' name='product_id' ordinal='1' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
     <datasource caption='delivery_times' inline='true' name='federated.0sko7ua1cv1fm1163wkn311y7hwd' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -967,6 +671,390 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
+    <datasource caption='Total_revenue_per_item' inline='true' name='federated.1tmghr209zde2z1827dso0xem581' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Total_revenue_per_item' name='textscan.0flet9i1tr7y4j1a522sb16eb5j6'>
+            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='Total_revenue_per_item.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='total_revenue_item' ordinal='0' />
+            <column datatype='string' name='product_id' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='total_revenue_item' ordinal='0' />
+            <column datatype='string' name='product_id' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Total_revenue_per_item.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_revenue_item</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_revenue_item]</local-name>
+            <parent-name>[Total_revenue_per_item.csv]</parent-name>
+            <remote-alias>total_revenue_item</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[Total_revenue_per_item.csv]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Total_revenue_per_item.csv' datatype='table' name='[__tableau_internal_object_id__].[Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132]' role='measure' type='quantitative' />
+      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
+      <column caption='Total Revenue Item' datatype='integer' name='[total_revenue_item]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Total_revenue_per_item.csv' id='Total_revenue_per_item.csv_A1603098B5404F808D11C9FD397DE132'>
+            <properties context=''>
+              <relation connection='textscan.0flet9i1tr7y4j1a522sb16eb5j6' name='Total_revenue_per_item.csv' table='[Total_revenue_per_item#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='total_revenue_item' ordinal='0' />
+                  <column datatype='string' name='product_id' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='customers_over_time' inline='true' name='federated.03vkziz0l9igs0191rfh91z0ydzt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='customers_over_time' name='textscan.00p7fqd0neavbi1friafs0l502qv'>
+            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='customers_over_time.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='customers' ordinal='0' />
+            <column datatype='integer' name='years' ordinal='1' />
+            <column datatype='integer' name='monat' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='customers' ordinal='0' />
+            <column datatype='integer' name='years' ordinal='1' />
+            <column datatype='integer' name='monat' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[customers_over_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>customers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[customers]</local-name>
+            <parent-name>[customers_over_time.csv]</parent-name>
+            <remote-alias>customers</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>years</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[years]</local-name>
+            <parent-name>[customers_over_time.csv]</parent-name>
+            <remote-alias>years</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monat</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[monat]</local-name>
+            <parent-name>[customers_over_time.csv]</parent-name>
+            <remote-alias>monat</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='customers_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6]' role='measure' type='quantitative' />
+      <column caption='Customers' datatype='integer' name='[customers]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Monat' datatype='integer' name='[monat]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Years' datatype='integer' name='[years]' role='dimension' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='customers_over_time.csv' id='customers_over_time.csv_BC36F321E41A4A3D99F1309AC050E1E6'>
+            <properties context=''>
+              <relation connection='textscan.00p7fqd0neavbi1friafs0l502qv' name='customers_over_time.csv' table='[customers_over_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='customers' ordinal='0' />
+                  <column datatype='integer' name='years' ordinal='1' />
+                  <column datatype='integer' name='monat' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='sellers_over_time' inline='true' name='federated.0vmdsn00d35o4d1cbu4dh0k2tumn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sellers_over_time' name='textscan.0nlzngr1ht9ynj16j3skz0pzmltt'>
+            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='sellers_over_time.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='vendors' ordinal='0' />
+            <column datatype='string' name='years' ordinal='1' />
+            <column datatype='string' name='monat' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='vendors' ordinal='0' />
+            <column datatype='string' name='years' ordinal='1' />
+            <column datatype='string' name='monat' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sellers_over_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vendors</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vendors]</local-name>
+            <parent-name>[sellers_over_time.csv]</parent-name>
+            <remote-alias>vendors</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>years</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[years]</local-name>
+            <parent-name>[sellers_over_time.csv]</parent-name>
+            <remote-alias>years</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>monat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[monat]</local-name>
+            <parent-name>[sellers_over_time.csv]</parent-name>
+            <remote-alias>monat</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='sellers_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE]' role='measure' type='quantitative' />
+      <column caption='Monat' datatype='string' name='[monat]' role='dimension' type='nominal' />
+      <column caption='Vendors' datatype='integer' name='[vendors]' role='measure' type='quantitative' />
+      <column aggregation='CountD' caption='Years' datatype='string' name='[years]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='sellers_over_time.csv' id='sellers_over_time.csv_13817D49C3A14C03B8CF1B0A9A31E9BE'>
+            <properties context=''>
+              <relation connection='textscan.0nlzngr1ht9ynj16j3skz0pzmltt' name='sellers_over_time.csv' table='[sellers_over_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='vendors' ordinal='0' />
+                  <column datatype='string' name='years' ordinal='1' />
+                  <column datatype='string' name='monat' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='profits_by_origin' inline='true' name='federated.1wab7rq1dypyc216o5rdq17v0jjp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='profits_by_origin' name='textscan.10ubxjo1iz6jo01gk5cc309ghrye'>
+            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='profits_by_origin.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.10ubxjo1iz6jo01gk5cc309ghrye' name='profits_by_origin.csv' table='[profits_by_origin#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='revenue' ordinal='0' />
+            <column datatype='string' name='origin' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.10ubxjo1iz6jo01gk5cc309ghrye' name='profits_by_origin.csv' table='[profits_by_origin#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='revenue' ordinal='0' />
+            <column datatype='string' name='origin' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[profits_by_origin.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[profits_by_origin.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[profits_by_origin.csv_F8B7B0A8916A49EDA328D9BBD0818B8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>origin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[origin]</local-name>
+            <parent-name>[profits_by_origin.csv]</parent-name>
+            <remote-alias>origin</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[profits_by_origin.csv_F8B7B0A8916A49EDA328D9BBD0818B8A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='profits_by_origin.csv' datatype='table' name='[__tableau_internal_object_id__].[profits_by_origin.csv_F8B7B0A8916A49EDA328D9BBD0818B8A]' role='measure' type='quantitative' />
+      <column caption='Origin' datatype='string' name='[origin]' role='dimension' type='nominal' />
+      <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='profits_by_origin.csv' id='profits_by_origin.csv_F8B7B0A8916A49EDA328D9BBD0818B8A'>
+            <properties context=''>
+              <relation connection='textscan.10ubxjo1iz6jo01gk5cc309ghrye' name='profits_by_origin.csv' table='[profits_by_origin#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='revenue' ordinal='0' />
+                  <column datatype='string' name='origin' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
   </datasources>
   <worksheets>
     <worksheet name='Sheet 1'>
@@ -1041,31 +1129,63 @@
             <view>
               <breakdown value='auto' />
             </view>
-            <mark class='Circle' />
-            <encodings>
-              <size column='[federated.09eszq91tqshxv156jrl90sjh9s2].[sum:count(mql_id):qk]' />
-              <text column='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' />
-              <color column='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-line-first' value='true' />
-                <format attr='mark-labels-line-last' value='true' />
-                <format attr='mark-labels-range-min' value='true' />
-                <format attr='mark-labels-range-max' value='true' />
-                <format attr='mark-labels-mode' value='all' />
-                <format attr='mark-labels-range-scope' value='pane' />
-                <format attr='mark-labels-range-field' value='' />
-              </style-rule>
-            </style>
+            <mark class='Automatic' />
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]</rows>
+        <cols>[federated.09eszq91tqshxv156jrl90sjh9s2].[sum:count(mql_id):qk]</cols>
       </table>
       <simple-id uuid='{0C7B64D3-0A06-4F12-9127-D196EC7C580F}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Marketing Channels Revenue</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='profits_by_origin' name='federated.1wab7rq1dypyc216o5rdq17v0jjp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wab7rq1dypyc216o5rdq17v0jjp'>
+            <column-instance column='[origin]' derivation='None' name='[none:origin:nk]' pivot='key' type='nominal' />
+            <column caption='Origin' datatype='string' name='[origin]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1wab7rq1dypyc216o5rdq17v0jjp].[none:origin:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1wab7rq1dypyc216o5rdq17v0jjp].[sum:revenue:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wab7rq1dypyc216o5rdq17v0jjp].[sum:revenue:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1wab7rq1dypyc216o5rdq17v0jjp].[sum:revenue:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1wab7rq1dypyc216o5rdq17v0jjp].[none:origin:nk]</rows>
+        <cols>([federated.1wab7rq1dypyc216o5rdq17v0jjp].[sum:revenue:qk] + [federated.1wab7rq1dypyc216o5rdq17v0jjp].[sum:revenue:qk])</cols>
+      </table>
+      <simple-id uuid='{EFD6259E-5CD7-4071-9F1E-E8FC7A200DAF}' />
     </worksheet>
     <worksheet name='Sheet 2'>
       <table>
@@ -1254,9 +1374,6 @@
             <column-instance column='[review_score]' derivation='Sum' name='[sum:review_score:qk]' pivot='key' type='quantitative' />
             <column-instance column='[review_creation_date]' derivation='Year' name='[yr:review_creation_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
-          <shelf-sorts>
-            <shelf-sort-v2 dimension-to-sort='[federated.0qbpdrf0xjldae10712ee07wsulu].[mn:review_creation_date:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0qbpdrf0xjldae10712ee07wsulu].[sum:review_score:qk]' shelf='rows' />
-          </shelf-sorts>
           <aggregation value='true' />
         </view>
         <style />
@@ -1389,7 +1506,7 @@
       <simple-id uuid='{726C1E4D-92A5-42D8-B704-E0F3229A0636}' />
     </worksheet>
   </worksheets>
-  <windows source-height='197'>
+  <windows source-height='219'>
     <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
@@ -1528,7 +1645,7 @@
       </cards>
       <simple-id uuid='{564E6B38-FDA4-46BE-A874-788E2896AF2E}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 7'>
+    <window class='worksheet' name='Sheet 7'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1625,13 +1742,31 @@
             <card type='title' />
           </strip>
         </edge>
-        <edge name='right'>
+      </cards>
+      <simple-id uuid='{ABD198D0-263C-4229-A510-6E0E7A4CC673}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' type='color' />
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{ABD198D0-263C-4229-A510-6E0E7A4CC673}' />
+      <simple-id uuid='{6A1C3CE0-9E83-4436-A1A8-695362A64493}' />
     </window>
   </windows>
 </workbook>
