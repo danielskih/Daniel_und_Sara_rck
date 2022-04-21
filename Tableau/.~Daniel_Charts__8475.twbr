@@ -602,91 +602,6 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
-    <datasource caption='Reviews_over_time' inline='true' name='federated.0qbpdrf0xjldae10712ee07wsulu' version='18.1'>
-      <connection class='federated'>
-        <named-connections>
-          <named-connection caption='Reviews_over_time' name='textscan.1whuomq0z6z8bn15no1yb1aplmxp'>
-            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='Reviews_over_time.csv' password='' server='' />
-          </named-connection>
-        </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='review_score' ordinal='0' />
-            <column datatype='datetime' name='review_creation_date' ordinal='1' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='review_score' ordinal='0' />
-            <column datatype='datetime' name='review_creation_date' ordinal='1' />
-          </columns>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <metadata-records>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[Reviews_over_time.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
-              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
-              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
-              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
-              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>review_score</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[review_score]</local-name>
-            <parent-name>[Reviews_over_time.csv]</parent-name>
-            <remote-alias>review_score</remote-alias>
-            <ordinal>0</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>review_creation_date</remote-name>
-            <remote-type>135</remote-type>
-            <local-name>[review_creation_date]</local-name>
-            <parent-name>[Reviews_over_time.csv]</parent-name>
-            <remote-alias>review_creation_date</remote-alias>
-            <ordinal>1</ordinal>
-            <local-type>datetime</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-        </metadata-records>
-      </connection>
-      <aliases enabled='yes' />
-      <_.fcp.ObjectModelTableType.true...column caption='Reviews_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]' role='measure' type='quantitative' />
-      <column caption='Review Creation Date' datatype='datetime' name='[review_creation_date]' role='dimension' type='ordinal' />
-      <column caption='Review Score' datatype='integer' name='[review_score]' role='measure' type='quantitative' />
-      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
-      <semantic-values>
-        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
-      </semantic-values>
-      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-        <objects>
-          <object caption='Reviews_over_time.csv' id='Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89'>
-            <properties context=''>
-              <relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
-                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-                  <column datatype='integer' name='review_score' ordinal='0' />
-                  <column datatype='datetime' name='review_creation_date' ordinal='1' />
-                </columns>
-              </relation>
-            </properties>
-          </object>
-        </objects>
-      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
-    </datasource>
     <datasource caption='delivery_times' inline='true' name='federated.0sko7ua1cv1fm1163wkn311y7hwd' version='18.1'>
       <connection class='federated'>
         <named-connections>
@@ -967,6 +882,91 @@
         </objects>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
+    <datasource caption='Reviews_over_time' inline='true' name='federated.0qbpdrf0xjldae10712ee07wsulu' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Reviews_over_time' name='textscan.1whuomq0z6z8bn15no1yb1aplmxp'>
+            <connection class='textscan' directory='/Users/danielfriedman/Documents/Iron Hack/git/Daniel_und_Sara_rck/Data Sources/CSV files' filename='Reviews_over_time.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='review_score' ordinal='0' />
+            <column datatype='datetime' name='review_creation_date' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='review_score' ordinal='0' />
+            <column datatype='datetime' name='review_creation_date' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Reviews_over_time.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_score]</local-name>
+            <parent-name>[Reviews_over_time.csv]</parent-name>
+            <remote-alias>review_score</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_creation_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[review_creation_date]</local-name>
+            <parent-name>[Reviews_over_time.csv]</parent-name>
+            <remote-alias>review_creation_date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Reviews_over_time.csv' datatype='table' name='[__tableau_internal_object_id__].[Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89]' role='measure' type='quantitative' />
+      <column caption='Review Creation Date' datatype='datetime' name='[review_creation_date]' role='dimension' type='ordinal' />
+      <column caption='Review Score' datatype='integer' name='[review_score]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Reviews_over_time.csv' id='Reviews_over_time.csv_2BCB436E878E4F5D898E89BF6D8C4A89'>
+            <properties context=''>
+              <relation connection='textscan.1whuomq0z6z8bn15no1yb1aplmxp' name='Reviews_over_time.csv' table='[Reviews_over_time#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='review_score' ordinal='0' />
+                  <column datatype='datetime' name='review_creation_date' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
   </datasources>
   <worksheets>
     <worksheet name='Sheet 1'>
@@ -1015,6 +1015,13 @@
       <simple-id uuid='{813CB16A-8F72-453A-8152-D6A12CDD22D1}' />
     </worksheet>
     <worksheet name='Sheet 10'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Sellers by aqusition channel.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
       <table>
         <view>
           <datasources>
@@ -1032,13 +1039,13 @@
         <panes>
           <pane selection-relaxation-option='selection-relaxation-allow'>
             <view>
-              <breakdown value='on' />
+              <breakdown value='auto' />
             </view>
-            <mark class='Automatic' />
+            <mark class='Circle' />
             <encodings>
               <size column='[federated.09eszq91tqshxv156jrl90sjh9s2].[sum:count(mql_id):qk]' />
-              <color column='[federated.09eszq91tqshxv156jrl90sjh9s2].[sum:count(mql_id):qk]' />
               <text column='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' />
+              <color column='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' />
             </encodings>
             <style>
               <style-rule element='mark'>
@@ -1247,6 +1254,9 @@
             <column-instance column='[review_score]' derivation='Sum' name='[sum:review_score:qk]' pivot='key' type='quantitative' />
             <column-instance column='[review_creation_date]' derivation='Year' name='[yr:review_creation_date:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0qbpdrf0xjldae10712ee07wsulu].[mn:review_creation_date:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0qbpdrf0xjldae10712ee07wsulu].[sum:review_score:qk]' shelf='rows' />
+          </shelf-sorts>
           <aggregation value='true' />
         </view>
         <style />
@@ -1379,7 +1389,7 @@
       <simple-id uuid='{726C1E4D-92A5-42D8-B704-E0F3229A0636}' />
     </worksheet>
   </worksheets>
-  <windows source-height='198'>
+  <windows source-height='197'>
     <window class='worksheet' name='Sheet 1'>
       <cards>
         <edge name='left'>
@@ -1518,7 +1528,7 @@
       </cards>
       <simple-id uuid='{564E6B38-FDA4-46BE-A874-788E2896AF2E}' />
     </window>
-    <window class='worksheet' name='Sheet 7'>
+    <window class='worksheet' maximized='true' name='Sheet 7'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1595,7 +1605,7 @@
       </viewpoint>
       <simple-id uuid='{B2103603-B696-4126-9882-96F30F0B9362}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 10'>
+    <window class='worksheet' name='Sheet 10'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1617,7 +1627,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card pane-specification-id='0' param='[federated.09eszq91tqshxv156jrl90sjh9s2].[sum:count(mql_id):qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.09eszq91tqshxv156jrl90sjh9s2].[none:origin:nk]' type='color' />
           </strip>
         </edge>
       </cards>
