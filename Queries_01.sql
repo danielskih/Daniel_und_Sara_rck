@@ -55,12 +55,12 @@ INNER JOIN olist_closed_deals_dataset USING(seller_id)
 LEFT JOIN olist_marketing_qualified_leads_dataset USING(mql_id)
 GROUP BY origin ORDER BY revenue DESC;
 # Average ratings 
-SELECT round(AVG(review_score)), YEAR(review_creation_date) AS jahr, QUARTER(review_creation_date) AS Q FROM olist_order_reviews_dataset GROUP BY jahr, monat Order by jahr, monat;
-
+SELECT AVG(review_score), YEAR(review_creation_date) AS jahr, QUARTER(review_creation_date) AS Q FROM olist_order_reviews_dataset GROUP BY jahr, Q Order by jahr, Q;
+# count ratings per score
 SELECT COUNT(review_score) as "count", review_score AS score, YEAR(review_creation_date) AS jahr, QUARTER(review_creation_date)
 AS Q FROM olist_order_reviews_dataset GROUP BY 'COUNT', score, jahr, Q ORDER BY jahr, Q, score;
 
-# Sellers
+# Sellers count
 SELECT COUNT(seller_id) FROM olist_sql.olist_sellers_dataset;
 # Average sellers performance per aquisition channel
 USE olist_sql;
