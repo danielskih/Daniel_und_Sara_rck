@@ -79,3 +79,12 @@ LEFT JOIN olist_marketing_qualified_leads_dataset USING(mql_id)
 GROUP BY seller_id, origin ORDER BY revenue DESC;
 # Total revenue
 SELECT ROUND(SUM(payment_value)) FROM olist_order_payments_dataset;
+# check the consistency of the sellers data
+use olist_sql;
+SELECT COUNT(seller_id) FROM olist_sellers_dataset WHERE seller_id IN
+(
+SELECT seller_id FROM olist_closed_deals_dataset WHERE seller_id IN
+(
+SELECT seller_id FROM olist_order_items_dataset
+)
+);
